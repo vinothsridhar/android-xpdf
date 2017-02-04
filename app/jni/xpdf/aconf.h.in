@@ -1,5 +1,5 @@
 /*
- * aconf-win32.h
+ * aconf.h
  *
  * Copyright 2002-2003 Glyph & Cog, LLC
  */
@@ -7,7 +7,7 @@
 #ifndef ACONF_H
 #define ACONF_H
 
-#include <aconf2.h>
+#include "aconf2.h"
 
 /*
  * Use A4 paper size instead of Letter for PostScript output.
@@ -27,12 +27,12 @@
 /*
  * Enable multithreading support.
  */
-#define MULTITHREADED 1
+#undef MULTITHREADED
 
 /*
  * Enable C++ exceptions.
  */
-#define USE_EXCEPTIONS 1
+#undef USE_EXCEPTIONS
 
 /*
  * Enable word list support.
@@ -87,15 +87,10 @@
 #undef HAVE_T1LIB_H
 
 /*
- * One of these is defined if using FreeType (version 1 or 2).
+ * One of these is defined if using FreeType 2.
  */
 #undef HAVE_FREETYPE_H
-#define HAVE_FREETYPE_FREETYPE_H 1
-
-/*
- * This is defined if using FreeType version 2.
- */
-#define FREETYPE2
+#undef HAVE_FREETYPE_FREETYPE_H
 
 /*
  * This is defined if using libpaper.
